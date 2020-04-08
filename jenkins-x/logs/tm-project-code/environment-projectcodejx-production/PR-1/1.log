@@ -1,0 +1,40 @@
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-l4bfx[0m
+{"level":"warn","ts":1586328867.1519446,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586328867.152468,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-srcpr[0m
+{"level":"warn","ts":1586328868.134278,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586328868.137331,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tm-project-code-environment-pro-ctk7z-t7nhs[0m
+{"level":"warn","ts":1586328873.1858354,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586328874.1982987,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/tm-project-code/environment-projectcode**-production.git @ master in path /workspace/source"}
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:e8ce7a464645bfb8c7841115d2ea36856d735b34,1:f18e889b727abdce2e5f31b82d1be137654e29f0
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f18e889b727abdce2e5f31b82d1be137654e29f0: e8ce7a464645bfb8c7841115d2ea36856d735b34:
+DEBUG: ran git fetch --unshallow origin f18e889b727abdce2e5f31b82d1be137654e29f0: e8ce7a464645bfb8c7841115d2ea36856d735b34: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard e8ce7a464645bfb8c7841115d2ea36856d735b34
+DEBUG: ran git reset --hard e8ce7a464645bfb8c7841115d2ea36856d735b34 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f18e889b727abdce2e5f31b82d1be137654e29f0
+DEBUG: ran git merge f18e889b727abdce2e5f31b82d1be137654e29f0 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e e8ce7a464645bfb8c7841115d2ea36856d735b34..HEAD
+Merged SHA f18e889b727abdce2e5f31b82d1be137654e29f0 with commit message 'The command `** delete application` was run by vvanouytsel and it generated this Pull Request' into base branch master
+
+Showing logs for build [32mtm-project-code-environment-pro-ctk7z-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
